@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,700&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+li, a   {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #161e2e;
+}
+
+.logo a  {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.navbar-links   {
+    display: flex;
+}
+
+.navbar-links  a  {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0 10px;
+}
+
+.navbar-links a:hover {
+    color: rgb(30, 167, 221);
+    border-bottom: 1px solid white;
+}
+
+.FaBars {
+    display: none;
+}
+
+@media screen and (max-width: 768px)    {
+    .FaBars  {
+        display: block;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    .logo   {
+        transform: translateX(0px);
+        transition: .1s ease-in;
+    }
+    .navbar-links   {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        padding: 20px;
+        width: 50%;
+        background-color:#192f58;
+        transform: translateX(-500px);
+        transition: .5s ease-in-out;
+    }
+
+    .navbar-links li    {
+        border-bottom: 1px solid white;
+    }
+
+    .navbar-links li {
+        padding: 20px;
+    }
+
+    .navbar-links a {
+        padding: 0;
+    }
+    .navbar-links a:hover   {
+        border-bottom: none;
+    }
+
+    .navbar-links li:last-of-type   {
+        border-bottom: none;
+    }
+}
